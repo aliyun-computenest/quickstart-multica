@@ -28,7 +28,7 @@
    sudo su root
    multica setup &
    multica config set server_url http://localhost:8080
-   multica login --token # 输入上一部创建的 API TOKEN
+   multica login --token # 输入上一步创建的 API TOKEN
    multica daemon start
    ```
 8. 刷新页面，进入 MultiCA 控制台, 点击Runtimes 可以看到已存在的 Hermes Runtime。
