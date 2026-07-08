@@ -25,7 +25,6 @@
 
 7. 执行命令配置 MultiCA CLI：
    ```shell
-   sudo su root
    hermes config set model.base_url # 输入百炼控制台(https://bailian.console.aliyun.com/cn-beijing?apiKey=1/api-key)获取的 OpenAI compatible
    multica config set server_url http://localhost:8080
    multica login --token # 输入上一步创建的 API TOKEN
