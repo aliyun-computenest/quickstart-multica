@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算巢是阿里云开放给企业应用服务商的服务管理平台。服务商能够在计算巢上发布私有化部署服务，为其客户提供云上软件一键部署的能力；同时也支持全托管模式的服务，赋能服务商托管其客户资源。">
+  <title>🤖 MultiCA 服务简介 - Aliyun 计算巢 x Demo</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+
+  
+
+  
+  
+
+  
+    <script src="search/main.js"></script>
+  
+
+  
+
+  <script src="js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="nav-inner">
+        <div class="logo">
+          <img src="./img/logo-2x.png">
+        </div>
+        <div class="nav-list">
+          <ul>
+          
+              <li><a href="#multica">🤖 MultiCA 服务简介</a></li>
+              
+                  <li><a href="#_1">🚀 部署流程</a></li>
+                  
+              
+                  <li><a href="#_2">📚 使用指南</a></li>
+                  
+                      <li class="li-h3"><a href="#_3">使用须知</a></li>
+                  
+              
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content theme-github">
+      
+      <div class="content-inner">        
+        
+        <h1 id="multica">🤖 MultiCA 服务简介</h1>
+<p>2026年5月，MultiCA Consortium 重磅推出 MultiCA —— 一款革命性的多智能体协作开源平台。
+告别单一大模型的局限，MultiCA 运行于你的私有集群，支持动态组建专家智能体网络。它能自主拆解复杂任务，协调多个专用 Agent 并行工作，并在任务完成后自动汇总结果与优化协作策略。
+一次部署，无限扩展。MultiCA，让智能体学会团队合作。</p>
+<h2 id="_1">🚀 部署流程</h2>
+<ol>
+<li>
+<p>访问计算巢 MultiCA
+   社区版 <a href="https://computenest.console.aliyun.com/service/instance/create/cn-hangzhou?type=user&amp;ServiceId=service-b60754b46a734871b646">部署链接</a>，按页面提示填写部署参数：<br />
+<img alt="image.png" src="img.png" /></p>
+</li>
+<li>
+<p>参数配置完成后，系统将自动生成<strong>费用预估明细</strong>。确认无误后点击 <strong>下一步：确认订单</strong>。</p>
+</li>
+<li>
+<p>在订单确认页，核对实例信息与费用，点击 <strong>立即创建</strong> 开始自动部署。</p>
+</li>
+<li>
+<p>部署完成后通过安全代理访问WebUI。输入邮箱 和 验证码（888888）登录控制台。 
+   <img alt="image.png" src="img_1.png" /></p>
+</li>
+<li>
+<p>点击 Settings 进入设置页面。点击 API TOKENS 创建 API TOKEN。
+   <img alt="image.png" src="img_2.jpg" /></p>
+</li>
+<li>
+<p>点击 资源&gt;资源ID&gt;ECS详情页&gt;远程连接&gt;通过Workbench远程连接 ECS：
+   <img alt="image.png" src="img_5.png" /></p>
+</li>
+<li>
+<p>执行命令配置 MultiCA CLI：
+   <code>shell
+   hermes config set model.base_url # 输入百炼控制台(https://bailian.console.aliyun.com/cn-beijing?apiKey=1/api-key)获取的 OpenAI compatible
+   multica config set server_url http://localhost:8080
+   multica login --token # 输入上一步创建的 API TOKEN
+   multica daemon start</code></p>
+</li>
+<li>
+<p>刷新页面，进入 MultiCA 控制台, 点击Runtimes 可以看到已存在的 Hermes Runtime。
+   <img alt="image.png" src="img_3.jpg" /></p>
+</li>
+<li>
+<p>按提示创建Agent，模型选择默认模型：
+   <img alt="image.png" src="img_4.jpg" /></p>
+</li>
+<li>
+<p>新建issue,选择创建的Agent派发任务。
+   <img alt="image.png" src="img_7.jpg" /></p>
+</li>
+</ol>
+<h2 id="_2">📚 使用指南</h2>
+<p>更多功能请参考 MultiCA <a href="https://multica.ai/docs">官方文档</a> 。</p>
+<h3 id="_3">使用须知</h3>
+<p>本工具为第三方开源项目，阿里云仅提供云资源和部署入口支持，不对工具自身功能、生成内容、执行结果、服务可用性及额外费用承担责任。</p>
+        
+      </div>
+
+      <div class="copyrights">© 2009-2022 Aliyun.com 版权所有</div>
+    </div>
+  </div>
+  
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2026-07-08 09:48:30.164309+00:00
+  -->
+</body>
+</html>
